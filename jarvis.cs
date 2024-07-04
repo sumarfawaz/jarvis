@@ -50,12 +50,20 @@ namespace jarvis
         {
             TaskCreator formNewTask = new TaskCreator();
             formNewTask.Show();
-            this.Dispose();
+            this.Hide();
         }
 
         private void jarvis_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void viewRoutine_Click(object sender, EventArgs e)
+        {
+            TasksForm form = new TasksForm();
+            form.Show();
+            this.Hide();
+
         }
     }
 }

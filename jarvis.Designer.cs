@@ -179,6 +179,7 @@
             viewRoutine.TabIndex = 3;
             viewRoutine.Text = "View Routine";
             viewRoutine.UseVisualStyleBackColor = false;
+            viewRoutine.Click += viewRoutine_Click;
             // 
             // timer1
             // 

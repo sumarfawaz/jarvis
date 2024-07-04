@@ -19,7 +19,7 @@ namespace jarvis
     public partial class TaskCreator : Form
     {
         private SQLiteConnection sqlite_conn;
-        private string dbFilePath = @"E:\jarvis\jarvis\database.db";
+        
         private string connectionString;
 
         public TaskCreator()
@@ -145,9 +145,9 @@ namespace jarvis
             // Add placeholder text as the first item
             //priorityBox.Items.Add("Priority");
             // Add other items
-            priorityBox.Items.Add("Item 1");
-            priorityBox.Items.Add("Item 2");
-            priorityBox.Items.Add("Item 3");
+            priorityBox.Items.Add("High");
+            priorityBox.Items.Add("Medium");
+            priorityBox.Items.Add("Low");
 
             // Set placeholder text as initially selected item
             //priorityBox.SelectedIndex = 0;
@@ -162,9 +162,9 @@ namespace jarvis
             // Add placeholder text as the first item
             //  priorityBox.Items.Add("Priority");
             // Add other items
-            taskTypeCombo.Items.Add("Item 1");
-            taskTypeCombo.Items.Add("Item 2");
-            taskTypeCombo.Items.Add("Item 3");
+            taskTypeCombo.Items.Add("Degree");
+            taskTypeCombo.Items.Add("Data Science");
+            taskTypeCombo.Items.Add("DealStreet");
 
             // Set placeholder text as initially selected item
             //priorityBox.SelectedIndex = 0;

@@ -122,7 +122,27 @@ namespace jarvis
         {
             UpdateDeleteTasks updateDeleteTasks = new UpdateDeleteTasks();
             updateDeleteTasks.Show();
-            
+
+        }
+
+        private void TasksForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Check if the form is closing due to the control box
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Prevent default closing behavior
+                e.Cancel = true;
+
+                // Create and show the new form
+                jarvis main = new jarvis();
+                main.Show();
+
+                // Close this form
+                this.Hide(); // Hiding the form
+
+
+
+            }
         }
     }
 }
