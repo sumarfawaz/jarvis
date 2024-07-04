@@ -161,8 +161,8 @@ namespace jarvis
                 string taskDescriptionValue = taskDescription.Text.Trim();
                 string priorityValue = priorityBox.Text.Trim();
                 string taskTypeValue = taskTypeCombo.Text.Trim();
-                DateTime startTimeValue = startTimePicker.Value;
-                DateTime endTimeValue = endTimePicker.Value;
+                string start_time = startTimePicker.Value.ToString("HH:mm");  //  format
+                string end_time = endTimePicker.Value.ToString("HH:mm");  //  format
 
                 // SQL query to update task based on task_id
                 string query = @"UPDATE tbl_task 
@@ -180,8 +180,8 @@ namespace jarvis
                     cmd.Parameters.AddWithValue("@TaskDescription", taskDescriptionValue);
                     cmd.Parameters.AddWithValue("@TaskSeverity", priorityValue);
                     cmd.Parameters.AddWithValue("@TaskType", taskTypeValue);
-                    cmd.Parameters.AddWithValue("@StartTime", startTimeValue);
-                    cmd.Parameters.AddWithValue("@EndTime", endTimeValue);
+                    cmd.Parameters.AddWithValue("@StartTime", start_time);
+                    cmd.Parameters.AddWithValue("@EndTime", end_time);
                     cmd.Parameters.AddWithValue("@TaskId", task_id);
 
                     try
