@@ -257,7 +257,7 @@ namespace jarvis
                             MessageBox.Show("Task deleted successfully.");
                             // Optionally clear form fields or refresh data/UI after deletion
                             ClearForm(); // Example method to clear form fields
-                           
+
                         }
                         else
                         {
@@ -273,6 +273,26 @@ namespace jarvis
             else
             {
                 MessageBox.Show("Invalid task ID format. Please enter a valid number.");
+            }
+        }
+
+        private void UpdateDeleteTasks_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Check if the form is closing due to the control box
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Prevent default closing behavior
+                e.Cancel = true;
+
+                // Create and show the new form
+                TasksForm main = new TasksForm();
+                main.Show();
+
+                // Close this form
+                this.Hide(); // Hiding the form
+
+
+
             }
         }
     }

@@ -122,6 +122,7 @@ namespace jarvis
         {
             UpdateDeleteTasks updateDeleteTasks = new UpdateDeleteTasks();
             updateDeleteTasks.Show();
+            this.Hide();
 
         }
 
