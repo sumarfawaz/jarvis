@@ -72,7 +72,7 @@ namespace jarvis
             {
 
                 // Getting the data from the form
-                string task_name = taskName.Text.Trim().ToLower();
+                string task_name = taskName.Text.Trim();
                 string task_description = taskDescription.Text.Trim();
                 string task_severity = priorityBox.Text.Trim();
                 string task_type = taskTypeCombo.SelectedItem?.ToString();  // Handle null selection
